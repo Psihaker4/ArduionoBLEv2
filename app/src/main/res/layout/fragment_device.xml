@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.psycho.arduionoble.DeviceFragment">
+
+    <TextView
+        android:text="Device name: "
+        android:id="@+id/device_name"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/device_name"
+        android:text="Device address: "
+        android:id="@+id/device_address"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Some beautiful future info will be here!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/connection_state"
+        android:text="Disconnected"
+        android:textColor="#f00"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="110dp"
+        android:layout_height="35dp" />
+
+    <Button
+        android:id="@+id/connect_button"
+        android:text="Connect"
+        android:padding="0dp"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_width="110dp"
+        android:layout_height="35dp" />
+
+    <com.example.psycho.arduionoble.ControlCircleLayout
+        android:id="@+id/controls"
+        android:layout_above="@id/connect_button"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="250dp">
+        <ImageView
+            android:src="@drawable/control_ring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/control_circle"
+            android:src="@drawable/control_circle"
+            android:layout_gravity="center"
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+    </com.example.psycho.arduionoble.ControlCircleLayout>
+
+</RelativeLayout>
